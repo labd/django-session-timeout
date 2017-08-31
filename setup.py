@@ -20,11 +20,11 @@ tests_require = [
 setup(
     name='django-session-timeout',
     version='0.0.1',
-    description="Something I made",
+    description="Middleware to expire sessions after specific amount of time",
     long_description=open('README.rst', 'r').read(),
     url='https://github.com/LabD/django-session-timeout',
-    author="Michael van Tellingen",
-    author_email="",
+    author="Lab Digital",
+    author_email="opensource@labdigital.nl",
     install_requires=[
         'Django>=1.8',
         'six>=1.1',
