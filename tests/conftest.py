@@ -5,7 +5,6 @@ def pytest_configure():
     settings.configure(
         INSTALLED_APPS=[
             'django.contrib.sessions'
-
         ],
         MIDDLEWARE_CLASSES=[],
         ROOT_URLCONF='tests.urls',
