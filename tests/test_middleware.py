@@ -11,6 +11,8 @@ def r(rf):
     req = rf.get('/')
     middleware = SessionMiddleware()
     middleware.process_request(req)
+    req.session['example_key'] = '1'
+
     req.session.save()
     yield req
 
@@ -19,6 +21,14 @@ def test_session_new(r):
     middleware = SessionTimeoutMiddleware()
     assert middleware.process_request(r) is None
     assert r.session[SESSION_TIMEOUT_KEY]
+
+
+def test_session_new_empty_session(r):
+    r.session.flush()
+
+    middleware = SessionTimeoutMiddleware()
+    assert middleware.process_request(r) is None
+    assert SESSION_TIMEOUT_KEY not in r.session
 
 
 def test_session_expire(r, settings):

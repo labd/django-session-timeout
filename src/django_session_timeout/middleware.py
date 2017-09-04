@@ -14,7 +14,7 @@ SESSION_TIMEOUT_KEY = '_session_init_timestamp_'
 
 class SessionTimeoutMiddleware(MiddlewareMixin):
     def process_request(self, request):
-        if not hasattr(request, 'session'):
+        if not hasattr(request, 'session') or request.session.is_empty():
             return
 
         init_time = request.session.setdefault(SESSION_TIMEOUT_KEY, time.time())
