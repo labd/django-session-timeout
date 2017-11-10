@@ -61,3 +61,23 @@ def test_session_expire_no_expire_setting(r, settings):
         response = middleware.process_request(r)
         assert SESSION_TIMEOUT_KEY not in r.session
         assert response['location'] == '/'
+
+
+def test_session_expire_last_activity(r, settings):
+    settings.SESSION_COOKIE_AGE = 3600
+    settings.SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
+    middleware = SessionTimeoutMiddleware()
+
+    with freeze_time('2017-08-31 20:46:00'):
+        assert middleware.process_request(r) is None
+
+    with freeze_time('2017-08-31 21:45:00'):
+        assert middleware.process_request(r) is None
+
+    with freeze_time('2017-08-31 21:46:01'):
+        assert middleware.process_request(r) is None
+
+    with freeze_time('2017-08-31 23:46:02'):
+        response = middleware.process_request(r)
+        assert SESSION_TIMEOUT_KEY not in r.session
+        assert response['location'] == '/'

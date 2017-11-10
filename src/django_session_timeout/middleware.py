@@ -18,6 +18,7 @@ class SessionTimeoutMiddleware(MiddlewareMixin):
             return
 
         init_time = request.session.setdefault(SESSION_TIMEOUT_KEY, time.time())
+
         expire_seconds = getattr(
             settings, 'SESSION_EXPIRE_SECONDS', settings.SESSION_COOKIE_AGE)
 
@@ -26,3 +27,8 @@ class SessionTimeoutMiddleware(MiddlewareMixin):
         if session_is_expired:
             request.session.flush()
             return redirect('/')
+
+        expire_since_last_activity = getattr(
+            settings, 'SESSION_EXPIRE_AFTER_LAST_ACTIVITY', False)
+        if expire_since_last_activity:
+            request.session[SESSION_TIMEOUT_KEY] = time.time()

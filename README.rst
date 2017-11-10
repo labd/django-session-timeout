@@ -46,3 +46,9 @@ And also add the ``SESSION_EXPIRE_SECONDS``:
     SESSION_EXPIRE_SECONDS = 3600  # 1 hour
 
 
+By default, the session will expire X seconds after the start of the session.
+To expire the session X seconds after the `last activity`, use the following setting:
+
+.. code-block:: python
+
+    SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
