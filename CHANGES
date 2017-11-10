@@ -1,6 +1,7 @@
-0.0.2 (xxxx-xx-xx)
+0.0.2 (2017-11-10)
 ==================
- - Added setting to control if session should be expired X seconds after last activity or first
+ - Added setting to control if session should be expired X seconds after last
+   activity or first
 
 
 0.0.1 (2017-09-06)
