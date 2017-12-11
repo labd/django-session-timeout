@@ -44,7 +44,7 @@ def test_session_expire(r, settings):
     with freeze_time('2017-08-31 22:46:01'):
         response = middleware.process_request(r)
         assert SESSION_TIMEOUT_KEY not in r.session
-        assert response['location'] == '/'
+        assert response['location'] == '/accounts/login/?next=/'
 
 
 def test_session_expire_no_expire_setting(r, settings):
@@ -60,7 +60,7 @@ def test_session_expire_no_expire_setting(r, settings):
     with freeze_time('2017-08-31 22:46:01'):
         response = middleware.process_request(r)
         assert SESSION_TIMEOUT_KEY not in r.session
-        assert response['location'] == '/'
+        assert response['location'] == '/accounts/login/?next=/'
 
 
 def test_session_expire_last_activity(r, settings):
@@ -80,4 +80,4 @@ def test_session_expire_last_activity(r, settings):
     with freeze_time('2017-08-31 23:46:02'):
         response = middleware.process_request(r)
         assert SESSION_TIMEOUT_KEY not in r.session
-        assert response['location'] == '/'
+        assert response['location'] == '/accounts/login/?next=/'

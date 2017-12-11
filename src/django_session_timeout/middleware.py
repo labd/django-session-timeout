@@ -1,7 +1,7 @@
 import time
 
 from django.conf import settings
-from django.shortcuts import redirect
+from django.contrib.auth.views import redirect_to_login
 
 try:
     from django.utils.deprecation import MiddlewareMixin
@@ -26,7 +26,7 @@ class SessionTimeoutMiddleware(MiddlewareMixin):
 
         if session_is_expired:
             request.session.flush()
-            return redirect('/')
+            return redirect_to_login(next=request.path)
 
         expire_since_last_activity = getattr(
             settings, 'SESSION_EXPIRE_AFTER_LAST_ACTIVITY', False)

@@ -1,3 +1,8 @@
+0.0.3 (xxxx-xx-xx)
+==================
+ - Redirect user to the login page after session timeout instead of the root page
+
+
 0.0.2 (2017-11-10)
 ==================
  - Added setting to control if session should be expired X seconds after last
