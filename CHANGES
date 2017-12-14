@@ -1,4 +1,4 @@
-0.0.3 (xxxx-xx-xx)
+0.0.3 (2017-12-14)
 ==================
  - Redirect user to the login page after session timeout instead of the root page
 
