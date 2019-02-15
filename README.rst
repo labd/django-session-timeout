@@ -5,8 +5,8 @@ django-session-timeout
 
 Status
 ======
-.. image:: https://travis-ci.org/LabD/django-session-timeout.svg?branch=master
-    :target: https://travis-ci.org/LabD/django-session-timeout
+.. image:: https://travis-ci.org/labd/django-session-timeout.svg?branch=master
+    :target: https://travis-ci.org/labd/django-session-timeout
 
 .. image:: http://codecov.io/github/LabD/django-session-timeout/coverage.svg?branch=master
     :target: http://codecov.io/github/LabD/django-session-timeout?branch=master
