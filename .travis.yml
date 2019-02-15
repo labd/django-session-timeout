@@ -12,6 +12,8 @@ matrix:
       env: TOXENV=py36-django110
     - python: 3.6
       env: TOXENV=py36-django111
+    - python: 3.6
+      env: TOXENV=py36-django2
 
 before_cache:
   - rm -rf $HOME/.cache/pip/log
