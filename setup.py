@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 docs_require = [
-    'sphinx>=1.4.0',
+    'sphinx>=1.8.4',
 ]
 
 tests_require = [
