@@ -2,7 +2,10 @@
 django-session-timeout
 ======================
 
-https://django-session-timeout.readthedocs.io/en/latest/
+.. image:: https://readthedocs.org/projects/django-session-timeout/badge/?version=latest
+    :target: https://django-session-timeout.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
 
 Status
 ======
