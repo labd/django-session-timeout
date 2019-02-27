@@ -2,6 +2,7 @@
 django-session-timeout
 ======================
 
+https://django-session-timeout.readthedocs.io/en/latest/
 
 Status
 ======
