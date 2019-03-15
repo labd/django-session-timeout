@@ -26,8 +26,8 @@ setup(
     author="Lab Digital",
     author_email="opensource@labdigital.nl",
     install_requires=[
-        'Django>=1.8',
-        'six>=1.1',
+        'Django>=1.11',
+        'six>=1.12',
     ],
     tests_require=tests_require,
     extras_require={
