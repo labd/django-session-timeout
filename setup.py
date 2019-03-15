@@ -6,15 +6,15 @@ docs_require = [
 
 tests_require = [
     'coverage==.4.2',
-    'freezegun==0.3.9',
-    'pytest==3.0.5',
-    'pytest-django==3.1.2',
+    'freezegun==0.3.11',
+    'pytest==4.3.1',
+    'pytest-django==3.4.8',
 
     # Linting
-    'isort==4.2.5',
-    'flake8==3.0.3',
+    'isort==4.3.15',
+    'flake8==3.7.7',
     'flake8-blind-except==0.1.1',
-    'flake8-debugger==1.4.0',
+    'flake8-debugger==3.1.0',
 ]
 
 setup(
