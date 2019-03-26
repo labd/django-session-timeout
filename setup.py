@@ -5,10 +5,11 @@ docs_require = [
 ]
 
 tests_require = [
-    'coverage==.4.2',
+    'coverage==4.2',
     'freezegun==0.3.11',
     'pytest==4.3.1',
     'pytest-django==3.4.8',
+    'pytest-cov==2.6.2',
 
     # Linting
     'isort==4.3.15',
