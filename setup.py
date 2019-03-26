@@ -9,7 +9,7 @@ tests_require = [
     'freezegun==0.3.11',
     'pytest==4.3.1',
     'pytest-django==3.4.8',
-    'pytest-cov==2.6.2',
+    'pytest-cov==2.6.1',
 
     # Linting
     'isort==4.3.15',
