@@ -52,3 +52,11 @@ To expire the session X seconds after the `last activity`, use the following set
 .. code-block:: python
 
     SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
+
+
+By default, `last activiy` will be grouped per second.
+To group by different period use the following setting:
+
+.. code-block:: python
+
+    SESSION_EXPIRE_AFTER_LAST_ACTIVITY_GRACE_PERIOD = 60 # group by minute
