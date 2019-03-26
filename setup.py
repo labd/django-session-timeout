@@ -5,7 +5,7 @@ docs_require = [
 ]
 
 tests_require = [
-    'coverage==4.2',
+    'coverage==4.5.3',
     'freezegun==0.3.11',
     'pytest==4.3.1',
     'pytest-django==3.4.8',
