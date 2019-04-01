@@ -18,11 +18,16 @@ tests_require = [
     'flake8-debugger==3.1.0',
 ]
 
+with open('README.rst') as fh:
+    long_description = re.sub(
+        '^.. start-no-pypi.*^.. end-no-pypi', '', fh.read(), flags=re.M | re.S)
+
+
 setup(
     name='django-session-timeout',
     version='0.0.3',
     description="Middleware to expire sessions after specific amount of time",
-    long_description=open('README.rst', 'r').read(),
+    long_description=long_description,
     url='https://github.com/LabD/django-session-timeout',
     author="Lab Digital",
     author_email="opensource@labdigital.nl",
