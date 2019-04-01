@@ -1,4 +1,13 @@
 jobs:
+  - job: UpdateBuildNumber
+    pool:
+      vmImage: ubuntu-16.04
+    steps:
+      - script: |
+          pip3 install --upgrade setuptools
+          echo "##vso[build.UpdateBuildNumber]`python3 setup.py --version`-$BUILD_BUILDID"
+        displayName: Set Version number
+
   - job: Test
     pool:
       vmImage: "ubuntu-16.04"
@@ -27,6 +36,7 @@ jobs:
           codecov
         condition: succeeded()
         displayName: "Upload coverage information to codecov.io"
+
   - job: Publish
     pool:
       vmImage: "ubuntu-16.04"
