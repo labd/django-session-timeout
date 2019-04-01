@@ -9,7 +9,7 @@
 .. image:: https://img.shields.io/pypi/v/django-session-timeout.svg
     :target: https://pypi.python.org/pypi/django-session-timeout/
 
-.. image:: https://readthedocs.org/projects/django-session-timeoutbadge/?version=stable
+.. image:: https://readthedocs.org/projects/django-session-timeout/badge/?version=stable
     :target: https://django-session-timeout.readthedocs.io/en/stable/?badge=stable
     :alt: Documentation Status
 
