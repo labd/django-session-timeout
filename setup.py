@@ -1,3 +1,5 @@
+import re
+
 from setuptools import find_packages, setup
 
 docs_require = [
@@ -5,29 +7,35 @@ docs_require = [
 ]
 
 tests_require = [
-    'coverage==.4.2',
-    'freezegun==0.3.9',
-    'pytest==3.0.5',
-    'pytest-django==3.1.2',
+    'coverage==4.5.3',
+    'freezegun==0.3.11',
+    'pytest==4.3.1',
+    'pytest-django==3.4.8',
+    'pytest-cov==2.6.1',
 
     # Linting
-    'isort==4.2.5',
-    'flake8==3.0.3',
+    'isort==4.3.15',
+    'flake8==3.7.7',
     'flake8-blind-except==0.1.1',
-    'flake8-debugger==1.4.0',
+    'flake8-debugger==3.1.0',
 ]
+
+with open('README.rst') as fh:
+    long_description = re.sub(
+        '^.. start-no-pypi.*^.. end-no-pypi', '', fh.read(), flags=re.M | re.S)
+
 
 setup(
     name='django-session-timeout',
-    version='0.0.3',
+    version='0.0.4',
     description="Middleware to expire sessions after specific amount of time",
-    long_description=open('README.rst', 'r').read(),
+    long_description=long_description,
     url='https://github.com/LabD/django-session-timeout',
     author="Lab Digital",
     author_email="opensource@labdigital.nl",
     install_requires=[
-        'Django>=1.8',
-        'six>=1.1',
+        'Django>=1.11',
+        'six>=1.12',
     ],
     tests_require=tests_require,
     extras_require={

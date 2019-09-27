@@ -1,3 +1,8 @@
+0.0.4 (2019-04-01)
+==================
+ - added grace period to SESSION_EXPIRE_AFTER_LAST_ACTIVITY
+
+
 0.0.3 (2017-12-14)
 ==================
  - Redirect user to the login page after session timeout instead of the root page
