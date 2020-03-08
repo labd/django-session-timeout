@@ -1,19 +1,26 @@
+0.1.0 (2020-03-08)
+------------------
+ - Add SESSION_TIMEOUT_REDIRECT to set a custom URL for redirect users which
+   have an expired session. See #9
+ - Update GitHub Actions CI/CD
+
+
 0.0.4 (2019-04-01)
-==================
+------------------
  - added grace period to SESSION_EXPIRE_AFTER_LAST_ACTIVITY
 
 
 0.0.3 (2017-12-14)
-==================
+------------------
  - Redirect user to the login page after session timeout instead of the root page
 
 
 0.0.2 (2017-11-10)
-==================
+------------------
  - Added setting to control if session should be expired X seconds after last
    activity or first
 
 
 0.0.1 (2017-09-06)
-==================
+------------------
  - Initial release
