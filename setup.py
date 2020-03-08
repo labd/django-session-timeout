@@ -27,7 +27,7 @@ with open("README.md") as fh:
 
 setup(
     name="django-session-timeout",
-    version="0.0.4",
+    version="0.1.0",
     description="Middleware to expire sessions after specific amount of time",
     long_description=long_description,
     long_description_content_type="text/markdown",
