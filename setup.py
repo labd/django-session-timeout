@@ -5,14 +5,14 @@ from setuptools import find_packages, setup
 docs_require = ["sphinx>=1.8.4"]
 
 tests_require = [
-    "coverage==4.5.3",
-    "freezegun==0.3.11",
-    "pytest==4.3.1",
-    "pytest-django==3.4.8",
-    "pytest-cov==2.6.1",
+    "coverage[toml]==5.0.3",
+    "freezegun==0.3.15",
+    "pytest==5.3.5",
+    "pytest-django==3.8.0",
+    "pytest-cov==2.8.1",\
     # Linting
-    "isort==4.3.15",
-    "flake8==3.7.7",
+    "isort[pyproject]==4.3.21",
+    "flake8==3.7.9",
     "flake8-blind-except==0.1.1",
     "flake8-debugger==3.1.0",
 ]
@@ -47,10 +47,10 @@ setup(
         "Development Status :: 5 - Production/Stable",
         "Environment :: Web Environment",
         "Framework :: Django",
-        "Framework :: Django :: 1.11",
         "Framework :: Django :: 2.0",
         "Framework :: Django :: 2.1",
         "Framework :: Django :: 2.2",
+        "Framework :: Django :: 3.0",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
