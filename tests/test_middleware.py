@@ -1,9 +1,11 @@
 import pytest
-from freezegun import freeze_time
-from django_session_timeout.middleware import SESSION_TIMEOUT_KEY
 from django.contrib.sessions.middleware import SessionMiddleware
+from freezegun import freeze_time
 
-from django_session_timeout.middleware import SessionTimeoutMiddleware
+from django_session_timeout.middleware import (
+    SESSION_TIMEOUT_KEY,
+    SessionTimeoutMiddleware,
+)
 
 
 @pytest.fixture(scope="function")

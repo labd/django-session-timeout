@@ -13,6 +13,10 @@ retest:
 coverage:
 	py.test --cov=django_session_timeout --cov-report=term-missing --cov-report=html
 
+format:
+	isort --recursive src tests
+	black src/ tests/
+
 docs:
 	$(MAKE) -C docs html
 

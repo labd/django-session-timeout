@@ -19,5 +19,5 @@ def pytest_configure():
         SESSION_ENGINE="django.contrib.sessions.backends.cache",
         DATABASES={
             "default": {"ENGINE": "django.db.backends.sqlite3", "NAME": "db.sqlite"}
-        }
+        },
     )
