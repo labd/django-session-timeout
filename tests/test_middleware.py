@@ -49,6 +49,19 @@ def test_session_expire(r, settings):
         assert response["location"] == "/accounts/login/?next=/"
 
 
+def test_session_expire_custom_redirect(r, settings):
+    settings.SESSION_EXPIRE_SECONDS = 3600
+    settings.SESSION_TIMEOUT_REDIRECT = "/foobar/"
+    middleware = SessionTimeoutMiddleware()
+
+    with freeze_time("2017-08-31 21:46:00"):
+        assert middleware.process_request(r) is None
+
+    with freeze_time("2017-08-31 22:46:01"):
+        response = middleware.process_request(r)
+        assert response["location"] == "/foobar/"
+
+
 def test_session_expire_no_expire_setting(r, settings):
     settings.SESSION_COOKIE_AGE = 3600
     middleware = SessionTimeoutMiddleware()

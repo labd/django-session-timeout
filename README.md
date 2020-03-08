@@ -48,3 +48,9 @@ To group by different period use the following setting:
 ```python
 SESSION_EXPIRE_AFTER_LAST_ACTIVITY_GRACE_PERIOD = 60 # group by minute
 ```
+
+To redirect to a custom URL define the following setting:
+
+```python
+SESSION_TIMEOUT_REDIRECT = 'your_redirect_url_here/'
+```
