@@ -28,9 +28,7 @@ class SessionTimeoutMiddleware(MiddlewareMixin):
 
         if session_is_expired:
             request.session.flush()
-            print("_____________________________---------------------___________________________")
-            redirect_url = getattr(settings, "SESSION_TIMEOUT_REDIRECT", None)
-            raise ValueError("Invalid input")
+            raise ValueError("Invalid input") # Graphql error
             return
 
         expire_since_last_activity = getattr(
