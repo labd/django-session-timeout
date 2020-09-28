@@ -28,8 +28,10 @@ class SessionTimeoutMiddleware(MiddlewareMixin):
 
         if session_is_expired:
             request.session.flush()
+            print("_____________________________---------------------___________________________")
             redirect_url = getattr(settings, "SESSION_TIMEOUT_REDIRECT", None)
             raise ("Invalid input")
+            return
 
         expire_since_last_activity = getattr(
             settings, "SESSION_EXPIRE_AFTER_LAST_ACTIVITY", False
