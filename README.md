@@ -54,3 +54,10 @@ To redirect to a custom URL define the following setting:
 ```python
 SESSION_TIMEOUT_REDIRECT = 'your_redirect_url_here/'
 ```
+
+
+To disable redirect add :
+
+```python
+SESSION_TIMEOUT_TO_REDIRECT = False
+```
