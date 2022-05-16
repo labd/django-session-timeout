@@ -54,3 +54,9 @@ To redirect to a custom URL define the following setting:
 ```python
 SESSION_TIMEOUT_REDIRECT = 'your_redirect_url_here/'
 ```
+
+To ignore URL paths that are not considered "activity" (such as those used when browser code is regularly polling for status) put a regular expression matching the paths to be ignored in the following setting:
+
+```python
+SESSION_ACTIVITY_IGNORED_PATHS_REGEX = '/first/ignored/path|/another/ignored/path'
+```
