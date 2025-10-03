@@ -29,10 +29,11 @@ class SessionTimeoutMiddleware(MiddlewareMixin):
         if session_is_expired:
             request.session.flush()
             redirect_url = getattr(settings, "SESSION_TIMEOUT_REDIRECT", None)
+            full_path = request.get_full_path()
             if redirect_url:
                 return redirect(redirect_url)
             else:
-                return redirect_to_login(next=request.path)
+                return redirect_to_login(next=full_path)
 
         expire_since_last_activity = getattr(
             settings, "SESSION_EXPIRE_AFTER_LAST_ACTIVITY", False
