@@ -7,7 +7,7 @@ docs_require = ["sphinx>=1.8.4"]
 tests_require = [
     "coverage[toml]==5.0.3",
     "freezegun==0.3.15",
-    "pytest==5.3.5",
+    "pytest==9.0.3",
     "pytest-django==3.8.0",
     "pytest-cov==2.8.1",\
     # Linting
