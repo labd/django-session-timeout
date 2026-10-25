@@ -14,8 +14,8 @@ coverage:
 	py.test --cov=django_session_timeout --cov-report=term-missing --cov-report=html
 
 format:
-	isort --recursive src tests
-	black src/ tests/
+	ruff format src tests
+	ruff check --fix src tests
 
 docs:
 	$(MAKE) -C docs html
@@ -24,9 +24,3 @@ release:
 	rm -rf dist/*
 	python setup.py sdist bdist_wheel
 	twine upload dist/*
-
-BLACK_EXCLUDE="/(\.git|\.hg|\.mypy_cache|\.tox|\.venv|_build|buck-out|build|dist)/"
-black:
-	pip install --upgrade black
-	black --verbose --exclude $(BLACK_EXCLUDE) ./src
-	black --verbose --exclude $(BLACK_EXCLUDE) ./tests
