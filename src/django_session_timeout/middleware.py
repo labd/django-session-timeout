@@ -3,12 +3,7 @@ import time
 from django.conf import settings
 from django.contrib.auth.views import redirect_to_login
 from django.shortcuts import redirect
-
-try:
-    from django.utils.deprecation import MiddlewareMixin
-except ImportError:
-    MiddlewareMixin = object
-
+from django.utils.deprecation import MiddlewareMixin
 
 SESSION_TIMEOUT_KEY = "_session_init_timestamp_"
 
