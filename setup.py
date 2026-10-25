@@ -7,8 +7,8 @@ docs_require = ["sphinx>=1.8.4"]
 tests_require = [
     "coverage[toml]==5.0.3",
     "freezegun==0.3.15",
-    "pytest==5.3.5",
-    "pytest-django==3.8.0",
+    "pytest==9.0.3",
+    "pytest-django==4.14.0",
     "pytest-cov==2.8.1",\
     # Linting
     "isort[pyproject]==4.3.21",
@@ -34,6 +34,7 @@ setup(
     url="https://github.com/LabD/django-session-timeout",
     author="Lab Digital",
     author_email="opensource@labdigital.nl",
+    python_requires=">=3.10",
     install_requires=["Django>=1.11", "six>=1.12"],
     tests_require=tests_require,
     extras_require={"docs": docs_require, "test": tests_require},
@@ -54,9 +55,7 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.10",
     ],
     zip_safe=False,
 )
