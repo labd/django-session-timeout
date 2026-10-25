@@ -1,5 +1,4 @@
 <!-- start-no-pypi -->
-[![codecov](https://codecov.io/gh/labd/django-session-timeout/branch/master/graph/badge.svg)](https://codecov.io/gh/labd/django-session-timeout)
 [![pypi](https://img.shields.io/pypi/v/django-session-timeout.svg)](https://pypi.python.org/pypi/django-session-timeout/)
 [![readthedocs](https://readthedocs.org/projects/django-session-timeout/badge/)](https://django-session-timeout.readthedocs.io/en/latest/)
 [![tests](https://github.com/labd/django-session-timeout/workflows/Python%20Tests/badge.svg)](https://github.com/labd/django-session-timeout/actions)
