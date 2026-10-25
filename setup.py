@@ -11,10 +11,7 @@ tests_require = [
     "pytest-django==4.14.0",
     "pytest-cov==2.8.1",\
     # Linting
-    "isort[pyproject]==4.3.21",
-    "flake8==3.7.9",
-    "flake8-blind-except==0.1.1",
-    "flake8-debugger==3.1.0",
+    "ruff",
 ]
 
 with open("README.md") as fh:
