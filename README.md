@@ -1,10 +1,8 @@
-<!-- start-no-pypi -->
-[![pypi](https://img.shields.io/pypi/v/django-session-timeout.svg)](https://pypi.python.org/pypi/django-session-timeout/)
-[![readthedocs](https://readthedocs.org/projects/django-session-timeout/badge/)](https://django-session-timeout.readthedocs.io/en/latest/)
-[![tests](https://github.com/labd/django-session-timeout/workflows/Python%20Tests/badge.svg)](https://github.com/labd/django-session-timeout/actions)
-<!-- end-no-pypi -->
-
 # django-session-timeout
+
+[![PyPI](https://img.shields.io/pypi/v/django-session-timeout)](https://pypi.org/project/django-session-timeout/)
+[![tests](https://github.com/labd/django-session-timeout/actions/workflows/python-test.yml/badge.svg)](https://github.com/labd/django-session-timeout/actions/workflows/python-test.yml)
+[![readthedocs](https://readthedocs.org/projects/django-session-timeout/badge/)](https://django-session-timeout.readthedocs.io/en/latest/)
 
 Add timestamp to sessions to expire them independently
 
