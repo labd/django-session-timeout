@@ -28,7 +28,7 @@ classifiers = [
 [project.urls]
 Homepage = "https://github.com/labd/django-session-timeout"
 Documentation = "https://django-session-timeout.readthedocs.io/"
-Changelog = "https://github.com/labd/django-session-timeout/blob/master/CHANGES"
+Changelog = "https://github.com/labd/django-session-timeout/blob/master/CHANGELOG.md"
 
 [dependency-groups]
 dev = [
@@ -68,6 +68,7 @@ packages = ["src/django_session_timeout"]
 include = [
     "src/django_session_timeout",
     "tests",
+    "CHANGELOG.md",
     "CHANGES",
     "LICENSE",
     "README.md",
